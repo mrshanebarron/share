@@ -13,6 +13,6 @@ class share extends Component
 
     public function render()
     {
-        return view('ld-share::components.share');
+        return view('sb-share::components.share');
     }
 }

@@ -20,7 +20,7 @@
 import { computed } from 'vue';
 
 export default {
-  name: 'LdShare',
+  name: 'SbShare',
   props: {
     url: { type: String, default: () => typeof window !== 'undefined' ? window.location.href : '' },
     title: { type: String, default: '' },

@@ -11,14 +11,14 @@ class shareServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/ld-share.php', 'ld-share');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-share.php', 'sb-share');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-share');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-share');
 
-        Livewire::component('ld-share', share::class);
+        Livewire::component('sb-share', share::class);
 
         $this->loadViewComponentsAs('ld', [
             Bladeshare::class,
@@ -26,12 +26,12 @@ class shareServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/ld-share.php' => config_path('ld-share.php'),
-            ], 'ld-share-config');
+                __DIR__ . '/../config/sb-share.php' => config_path('sb-share.php'),
+            ], 'sb-share-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/ld-share'),
-            ], 'ld-share-views');
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/sb-share'),
+            ], 'sb-share-views');
         }
     }
 }

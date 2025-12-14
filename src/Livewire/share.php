@@ -48,6 +48,6 @@ class Share extends Component
 
     public function render()
     {
-        return view('ld-share::livewire.share');
+        return view('sb-share::livewire.share');
     }
 }

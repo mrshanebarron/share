@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // Default settings for ld-share
+    // Default settings for sb-share
 ];
