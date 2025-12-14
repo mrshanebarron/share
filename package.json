@@ -1,0 +1,12 @@
+{
+    "name": "@laraveldesign/share",
+    "version": "1.0.0",
+    "description": "Social share buttons for Laravel",
+    "main": "resources/js/vue/index.js",
+    "module": "resources/js/vue/index.js",
+    "files": ["resources/js/vue"],
+    "keywords": ["laravel", "share", "social", "twitter", "livewire", "vue"],
+    "author": "Shane Barron <mrshanebarron@gmail.com>",
+    "license": "MIT",
+    "peerDependencies": {"vue": "^3.0.0"}
+}
