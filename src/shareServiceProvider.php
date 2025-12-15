@@ -1,13 +1,12 @@
 <?php
 
-namespace MrShaneBarron\share;
+namespace MrShaneBarron\Share;
 
 use Illuminate\Support\ServiceProvider;
-use MrShaneBarron\share\Livewire\share;
-use MrShaneBarron\share\View\Components\share as Bladeshare;
-use Livewire\Livewire;
+use MrShaneBarron\Share\Livewire\Share;
+use MrShaneBarron\Share\View\Components\Share as BladeShare;
 
-class shareServiceProvider extends ServiceProvider
+class ShareServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -18,10 +17,12 @@ class shareServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-share');
 
-        Livewire::component('sb-share', share::class);
+        if (class_exists(\Livewire\Livewire::class)) {
+            \Livewire\Livewire::component('sb-share', Share::class);
+        }
 
         $this->loadViewComponentsAs('ld', [
-            Bladeshare::class,
+            BladeShare::class,
         ]);
 
         if ($this->app->runningInConsole()) {
